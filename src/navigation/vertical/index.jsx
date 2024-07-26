@@ -20,4 +20,10 @@ export default [
     path: "/users",
     icon: <FaRegUser size={21} />,
   },
+  {
+    id: "items",
+    title: "Items",
+    path: "/items",
+    icon: <FaRegUser size={21} />,
+  },
 ];

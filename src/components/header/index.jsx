@@ -12,6 +12,11 @@ const Header = ({
   viewType,
   onViewType,
 }) => {
+
+  const handleSearch = (query) => {
+    onSearch(query);
+  };
+
   return (
     <div className="header">
       <h1 className="cursor-pointer font-bold text-lg text-light_text_1 dark:text-dark_text_1">
@@ -19,7 +24,7 @@ const Header = ({
       </h1>
 
       <div className="header-items">
-        <SearchBar onChange={onSearch} field="title" />
+        <SearchBar onChange={handleSearch} field="title" />
         <div className="header-buttons">
           <Button
             title={buttonTitle}
