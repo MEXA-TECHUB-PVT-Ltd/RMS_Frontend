@@ -8,6 +8,8 @@ import Item from "../../views/Item/Item"
 import AddItem from "../../views/Item/AddItem";
 import EditItem from "../../views/Item/EditItem";
 import ItemDetails from "../../views/Item/ItemDetails";
+import Purchaseorder from "../../views/Purchaseorder/Purchaseorder"
+import PurchaseorderDetails from "../../views/Purchaseorder/PurchaseorderDetails"
 
 export default [
   {
@@ -49,5 +51,13 @@ export default [
   {
     path: "/item-detail",
     element: <ItemDetails />,
+  },
+  {
+    path: "/puchase-order",
+    element: <Purchaseorder />,
+  },
+  {
+    path: "/puchase-order-details",
+    element: <PurchaseorderDetails />,
   },
 ];
