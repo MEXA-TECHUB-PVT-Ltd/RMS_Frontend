@@ -8,6 +8,9 @@ import getPaymentTermSlice from "./features/paymentTerms/getPaymentTermSlice";
 import deleteVendorSlice from "./features/Vendor/deleteVendorSlice";
 import updateVendorSlice from "./features/Vendor/updateVendorSlice";
 
+import getItemSlice from "./features/Item/getItemSlice";
+import getPurchaseOrderSlice from "./features/Purchaseorder/getPurchaseOrderSlice";
+
 const rootReducer = combineReducers({
   theme: themeReducer,
   user: userReducer,
@@ -17,6 +20,8 @@ const rootReducer = combineReducers({
   getVendor: getVendorSlice,
   getCurrency: getCurrencySlice,
   getPaymentTerm: getPaymentTermSlice,
+  getItem: getItemSlice,
+  getPO: getPurchaseOrderSlice
 });
 
 export default rootReducer;
