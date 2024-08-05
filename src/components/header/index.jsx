@@ -2,6 +2,7 @@ import React from "react";
 import SearchBar from "../form/SearchBar";
 import Button from "../form/Button";
 import GridButton from "../form/GridButton";
+import FE_URL from "../../url_FE";
 
 const Header = ({
   title,
@@ -24,19 +25,44 @@ const Header = ({
       </h1>
 
       <div className="header-items">
-        <SearchBar onChange={handleSearch} field="title" />
-        <div className="header-buttons">
-          <Button
-            title={buttonTitle}
-            icon={buttonIcon}
-            onClick={onAddButtonClick}
-          />
+        {window.location.href == `${FE_URL}puchase-order` ?
           <GridButton
             onGridView={() => onViewType("GRID")}
             onListView={() => onViewType("")}
             grid={viewType === "GRID"}
           />
-        </div>
+          :
+          window.location.href == `${FE_URL}puchase-requisition` ?
+            <>
+              <div className="header-buttons">
+                <Button
+                  title={buttonTitle}
+                  icon={buttonIcon}
+                  onClick={onAddButtonClick}
+                />
+                <GridButton
+                  onGridView={() => onViewType("GRID")}
+                  onListView={() => onViewType("")}
+                  grid={viewType === "GRID"}
+                />
+              </div>
+            </>
+            :
+            <>
+              <SearchBar onChange={handleSearch} field="title" />
+              <div className="header-buttons">
+                <Button
+                  title={buttonTitle}
+                  icon={buttonIcon}
+                  onClick={onAddButtonClick}
+                />
+                <GridButton
+                  onGridView={() => onViewType("GRID")}
+                  onListView={() => onViewType("")}
+                  grid={viewType === "GRID"}
+                />
+              </div>
+            </>}
       </div>
     </div>
   );
