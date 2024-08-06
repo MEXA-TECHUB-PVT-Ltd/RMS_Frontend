@@ -8,9 +8,13 @@ import Item from "../../views/Item/Item"
 import AddItem from "../../views/Item/AddItem";
 import EditItem from "../../views/Item/EditItem";
 import ItemDetails from "../../views/Item/ItemDetails";
-import Purchaseorder from "../../views/Purchaseorder/Purchaseorder"
-import PurchaseorderDetails from "../../views/Purchaseorder/PurchaseorderDetails"
-
+import Purchaseorder from "../../views/Purchaseorder/Purchaseorder";
+import PurchaseorderDetails from "../../views/Purchaseorder/PurchaseorderDetails";
+import Purchaserequisition from "../../views/Purchaserequisition/Purchaserequisition";
+import AddPurchaseRequistion from "../../views/Purchaserequisition/AddP-requisition"
+import EditPurchaseRequistion from "../../views/Purchaserequisition/EditP-requisition"
+import PurchaseRequisitionDetail from "../../views/Purchaserequisition/PurchaseRequisitionDetail"
+ 
 export default [
   {
     path: "/",
@@ -60,4 +64,20 @@ export default [
     path: "/puchase-order-details",
     element: <PurchaseorderDetails />,
   },
+  {
+    path: "/puchase-requisition",
+    element: <Purchaserequisition />,
+  },
+  {
+    path: "/add-puchase-requisition",
+    element: <AddPurchaseRequistion />,
+  },
+  {
+    path: "/edit-puchase-requisition",
+    element: <EditPurchaseRequistion />,
+  },
+  {
+    path: "/purchase-requisition-details",
+    element: <PurchaseRequisitionDetail />,
+  },  
 ];

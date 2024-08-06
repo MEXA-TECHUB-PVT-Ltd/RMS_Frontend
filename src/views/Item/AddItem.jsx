@@ -51,10 +51,8 @@ const AddItem = () => {
         );
     }, []);
 
-    const { getRootProps, getInputProps, isDragActive } = useDropzone({
-        onDrop: onCnicBackDrop,
-        multiple: false,
-    });
+
+
 
     const itemOptions = [
         { value: "PRODUCT", label: "PRODUCT" },
@@ -131,6 +129,32 @@ const AddItem = () => {
         { value: "CONSUMER", label: "CONSUMER" },
         { value: "ASSETS", label: "ASSETS" },
     ];
+
+    const {
+        getRootProps: documentRootProps,
+        getInputProps: documentInputProps,
+        isDragActive: isDocumentDrag,
+    } = useDropzone({
+        onDrop: onDocumentDrop,
+        multiple: false,
+        accept: {
+            "application/pdf": [".pdf"],
+        },
+    });
+
+    const {
+        getRootProps: cnicFrontRootProps,
+        getInputProps: cnicInputProps,
+        isDragActive: isCnicDrag,
+    } = useDropzone({
+        onDrop: onCnicDrop,
+        multiple: false,
+    });
+
+    const { getRootProps, getInputProps, isDragActive } = useDropzone({
+        onDrop: onCnicBackDrop,
+        multiple: false,
+    });
 
     const image = () => {
         console.log(cnic_back_img)
@@ -296,7 +320,7 @@ const AddItem = () => {
                             position: toast.POSITION.BOTTOM_CENTER
                         });
                     });
-            }, 3000); 
+            }, 3000);
         }
     };
 

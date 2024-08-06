@@ -1,4 +1,4 @@
-import { FaRegUser, FaStoreAlt, FaProductHunt, FaViacoin } from "react-icons/fa";
+import { FaRegUser, FaStoreAlt, FaProductHunt, FaViacoin, FaAlipay } from "react-icons/fa";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
 
 export default [
@@ -25,6 +25,12 @@ export default [
     title: "Items",
     path: "/items",
     icon: <FaProductHunt size={21} />,
+  },
+  {
+    id: "purchaserequisition",
+    title: "Purchase Requistion",
+    path: "/puchase-requisition",
+    icon: <FaAlipay size={21} />,
   },
   {
     id: "purchaseorder",
